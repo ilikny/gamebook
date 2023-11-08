@@ -45,10 +45,23 @@ const App = () => {
     loadChapter();
   },[chapter]);
 
+  const [open, setOpen] = useState(true);
+
+      function slideWelcome() {
+        setOpen(!open);
+    }
+
 
 
   return (
     <div>
+      <div className={"overlay" + (open ? "" : "overlay")}>
+        <h1>Welcome to the gamebook<br/>
+        SECRET OF PYRAMIDS
+        </h1>
+        <img className='welcome_image' src="img/pyramid-custom.png" alt="" />
+        <span onClick={slideWelcome}>Start reading</span>
+      </div>
       <h1>Secret of pyramids</h1>
         <Image image={image}/>
         <Chapter  chapterData={chapterData} />
