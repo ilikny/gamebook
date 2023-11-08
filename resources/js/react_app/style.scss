@@ -41,10 +41,8 @@ button:hover{
   overflow-x: hidden;
   display: flex;
   flex-direction: column;
-  align-content: center;
   align-items: center;
   padding-top: 10em;
-}
 
 .welcome_image{
   width: 20em;
@@ -57,4 +55,9 @@ button:hover{
   50% {
     transform: rotateY(90deg);
   }
+}
+}
+
+.overlay_fuc{
+  display: none;
 }

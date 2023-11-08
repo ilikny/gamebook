@@ -45,9 +45,9 @@ const App = () => {
     loadChapter();
   },[chapter]);
 
-  const [open, setOpen] = useState(true);
+  const [open, setOpen] = useState(null);
 
-      function slideWelcome() {
+  function slideWelcome() {
         setOpen(!open);
     }
 
@@ -55,7 +55,7 @@ const App = () => {
 
   return (
     <div>
-      <div className={"overlay" + (open ? "" : "overlay")}>
+      <div className={"overlay" + (open ? "_fuc" : " ")}>
         <h1>Welcome to the gamebook<br/>
         SECRET OF PYRAMIDS
         </h1>
